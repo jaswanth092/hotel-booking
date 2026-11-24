@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelia Grand Hotel & Resort | Luxury Stays</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">AURELIA <span>GRAND</span></a>
+            <nav class="nav-links">
+                <a href="#rooms">Rooms & Suites</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#reviews">Guest Reviews</a>
+                <a href="#booking" class="btn-nav">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle">Coastal Sanctuary & Heritage Retreat</p>
+            <h1>Where Timeless Elegance Meets Ocean Serenity</h1>
+            <p class="hero-description">Experience bespoke hospitality, panoramic sea views, and curated wellness in the heart of the coast.</p>
+            <div class="hero-actions">
+                <a href="#booking" class="btn btn-primary">Reserve Your Stay</a>
+                <a href="#rooms" class="btn btn-outline">Explore Suites</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Booking Bar -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="booking-card">
+                <div class="booking-header">
+                    <h2>Book Your Stay</h2>
+                    <p>Best rate guaranteed when booking directly with us</p>
+                </div>
+                <form class="booking-form" action="#booking-confirmed" method="get">
+                    <div class="form-group">
+                        <label for="checkin">Check-In Date</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout">Check-Out Date</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="room-type">Room Category</label>
+                        <select id="room-type" name="room-type" required>
+                            <option value="deluxe">Deluxe Garden Room ($240/night)</option>
+                            <option value="ocean">Premier Oceanfront Suite ($420/night)</option>
+                            <option value="royal">Royal Penthouse Villa ($890/night)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Guests</label>
+                        <select id="guests" name="guests">
+                            <option value="1">1 Adult</option>
+                            <option value="2" selected>2 Adults</option>
+                            <option value="3">2 Adults, 1 Child</option>
+                            <option value="4">4 Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-name">Full Name</label>
+                        <input type="text" id="guest-name" name="guest-name" placeholder="Elena Vance" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-email">Email Address</label>
+                        <input type="email" id="guest-email" name="guest-email" placeholder="elena@example.com" required>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-full">Confirm Reservation</button>
+                    </div>
+                </form>
+                <div id="booking-confirmed" class="confirmation-banner">
+                    <p><strong>Reservation Request Received!</strong> Thank you for choosing Aurelia Grand. Our concierge will send your booking confirmation shortly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Categories Section -->
+    <section id="rooms" class="section rooms-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Accommodations</span>
+                <h2>Curated Rooms & Suites</h2>
+                <p>Thoughtfully designed sanctuaries featuring natural materials, plush bedding, and private balconies.</p>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Room 1 -->
+                <article class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="Deluxe Garden Room">
+                        <span class="room-badge">Popular</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-meta">
+                            <span>45 m²</span>
+                            <span>•</span>
+                            <span>King Bed</span>
+                            <span>•</span>
+                            <span>Up to 2 Guests</span>
+                        </div>
+                        <h3>Deluxe Garden Room</h3>
+                        <p>Overlooking our private botanical courtyard, featuring a marble rain shower, artisanal minibar, and sunlit terrace.</p>
+                        <ul class="room-perks">
+                            <li>Private Garden Terrace</li>
+                            <li>Complimentary Breakfast</li>
+                            <li>High-Speed Wi-Fi</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="price">
+                                <span class="amount">$240</span>
+                                <span class="period">/ night</span>
+                            </div>
+                            <a href="#booking" class="btn btn-secondary">Select Room</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Room 2 -->
+                <article class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Premier Oceanfront Suite">
+                        <span class="room-badge badge-gold">Best View</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-meta">
+                            <span>78 m²</span>
+                            <span>•</span>
+                            <span>Super King</span>
+                            <span>•</span>
+                            <span>Up to 3 Guests</span>
+                        </div>
+                        <h3>Premier Oceanfront Suite</h3>
+                        <p>Floor-to-ceiling windows frame uninterrupted horizon views, complete with a separate living lounge and deep soaking tub.</p>
+                        <ul class="room-perks">
+                            <li>180° Ocean Panorama</li>
+                            <li>Soaking Tub & Rain Shower</li>
+                            <li>Evening Cocktail Service</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="price">
+                                <span class="amount">$420</span>
+                                <span class="period">/ night</span>
+                            </div>
+                            <a href="#booking" class="btn btn-secondary">Select Room</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Room 3 -->
+                <article class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=80" alt="Royal Penthouse Villa">
+                        <span class="room-badge">Signature</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-meta">
+                            <span>150 m²</span>
+                            <span>•</span>
+                            <span>2 Bedrooms</span>
+                            <span>•</span>
+                            <span>Up to 4 Guests</span>
+                        </div>
+                        <h3>Royal Penthouse Villa</h3>
+                        <p>Our flagship top-floor residence offering a private infinity plunge pool, dedicated butler service, and dining pavilion.</p>
+                        <ul class="room-perks">
+                            <li>Private Infinity Plunge Pool</li>
+                            <li>24/7 Dedicated Butler</li>
+                            <li>Airport Chauffeur Transfer</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="price">
+                                <span class="amount">$890</span>
+                                <span class="period">/ night</span>
+                            </div>
+                            <a href="#booking" class="btn btn-secondary">Select Room</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="section facilities-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Hotel Amenities</span>
+                <h2>World-Class Facilities</h2>
+                <p>Every detail of your stay is elevated with thoughtfully curated wellness, dining, and leisure experiences.</p>
+            </div>
+
+            <div class="facilities-grid">
+                <div class="facility-item">
+                    <div class="facility-icon">🏊</div>
+                    <h3>Infinity Horizon Pool</h3>
+                    <p>Heated saltwater infinity pool overlooking the coastline with poolside cabana service.</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🧖</div>
+                    <h3>Aurelia Botanical Spa</h3>
+                    <p>Holistic hydrotherapy circuits, Ayurvedic massages, and private couples' treatment suites.</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🍽️</div>
+                    <h3>Saffron & Salt Dining</h3>
+                    <p>Award-winning coastal fine dining featuring locally harvested seafood and organic produce.</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🏋️</div>
+                    <h3>24/7 Wellness Studio</h3>
+                    <p>State-of-the-art Technogym equipment, sunrise yoga deck, and personal training sessions.</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🚗</div>
+                    <h3>Valet & EV Charging</h3>
+                    <p>Complimentary secure underground valet parking with dedicated fast-charging stations.</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">📶</div>
+                    <h3>Fiber Wi-Fi & Lounge</h3>
+                    <p>Ultra-fast gigabit connectivity throughout the property plus a quiet executive library.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="section reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Guest Stories</span>
+                <h2>What Our Guests Say</h2>
+                <div class="overall-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.9 / 5 based on 1,240 verified stays</span>
+                </div>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Waking up to the sound of waves in the Premier Oceanfront Suite was unforgettable. The staff anticipated every single need before we even asked."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">SC</div>
+                        <div>
+                            <h4>Sophia Chen</h4>
+                            <span>Stayed in Premier Oceanfront Suite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The Botanical Spa and infinity pool are pure perfection. Dinner at Saffron & Salt was easily the highlight of our anniversary trip."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">MR</div>
+                        <div>
+                            <h4>Marcus & Claire Reid</h4>
+                            <span>Stayed in Royal Penthouse Villa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Immaculate design, serene garden courtyard, and effortless check-in. I extended my business trip by two days just to enjoy the resort."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">AK</div>
+                        <div>
+                            <h4>Arjun Kapoor</h4>
+                            <span>Stayed in Deluxe Garden Room</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">AURELIA <span>GRAND</span></a>
+                <p>142 Coastal Boulevard, Bayview Cove<br>Reservations: +1 (800) 555-0194<br>concierge@aureliagrand.com</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#rooms">Rooms & Suites</a></li>
+                    <li><a href="#facilities">Spa & Dining</a></li>
+                    <li><a href="#reviews">Guest Reviews</a></li>
+                    <li><a href="#booking">Direct Booking</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Guest Policies</h4>
+                <ul>
+                    <li><a href="#booking">Check-in: 3:00 PM</a></li>
+                    <li><a href="#booking">Check-out: 11:00 AM</a></li>
+                    <li><a href="#booking">Flexible Cancellation</a></li>
+                    <li><a href="#booking">Airport Transfers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aurelia Grand Hotel & Resort. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
